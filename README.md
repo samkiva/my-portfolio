@@ -50,7 +50,7 @@ This is my first personal portfolio website — designed to showcase my skills, 
 
 Feel free to reach out if you'd like to collaborate or give feedback.
 
-- Email: your.email@example.com  
+- Email: kivairusamuel9409@gmail.com  
 - LinkedIn: [www.linkedin.com/in/samuel-kivairu-919483371)  
 - GitHub: [your-github](https://github.com/samkiva)
 
