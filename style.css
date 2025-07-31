@@ -1,0 +1,138 @@
+/* 1) Design tokens (light by default), can be overridden for dark */
+:root {
+  --bg: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --card: #f9fafb;
+  --border: #e5e7eb;
+  --accent: #3b82f6; /* change later if you want */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0f14;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --card: #111827;
+    --border: #1f2937;
+    --accent: #60a5fa;
+  }
+}
+
+/* When user toggles theme to 'dark', we attach [data-user-theme="dark"] to html */
+html[data-user-theme="light"] {
+  --bg: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --card: #f9fafb;
+  --border: #e5e7eb;
+  --accent: #3b82f6;
+}
+
+html[data-user-theme="dark"] {
+  --bg: #0b0f14;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --card: #111827;
+  --border: #1f2937;
+  --accent: #60a5fa;
+}
+
+/* 2) Base */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+/* 3) Layout */
+.container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+.site-header, .site-footer { border-bottom: 1px solid var(--border); }
+.site-footer { border-top: 1px solid var(--border); border-bottom: 0; padding: 16px 24px; }
+.site-header .nav, .site-footer p { max-width: 1100px; margin: 0 auto; }
+.site-header .nav { display: flex; align-items: center; gap: 16px; padding: 12px 24px; }
+
+/* 4) Nav */
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+.brand-text { display: flex; flex-direction: column; line-height: 1.1; }
+.alias { color: var(--muted); font-size: 12px; }
+.avatar { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--border); }
+
+.nav-links { list-style: none; display: flex; gap: 16px; margin-left: auto; padding: 0; }
+.nav-links a { text-decoration: none; color: inherit; padding: 6px 8px; border-radius: 8px; }
+.nav-links a.active { background: var(--card); }
+.nav-toggle { display: none; }
+
+.theme-toggle { background: transparent; border: 1px solid var(--border); padding: 6px 10px; border-radius: 8px; cursor: pointer; }
+
+/* 5) Hero, cards, buttons */
+.hero { padding: 48px 24px; }
+.lead { color: var(--muted); margin-top: 6px; }
+.accent { color: var(--accent); }
+.cta-row { display: flex; gap: 12px; margin-top: 16px; }
+.btn { display: inline-block; padding: 10px 16px; border: 1px solid var(--accent); color: var(--accent); text-decoration: none; border-radius: 10px; }
+.btn.ghost { border-color: var(--border); color: var(--text); }
+.btn:hover { opacity: 0.9; }
+
+.cards { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 24px 0; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+.link { color: var(--accent); text-decoration: none; }
+
+.bullets { padding-left: 18px; }
+.bullets li { margin: 6px 0; }
+
+/* 6) Contact grid */
+.contact-grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
+.contact-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+
+/* 7) Responsive */
+@media (max-width: 760px) {
+  .nav-toggle { display: block; margin-left: auto; }
+  .nav-links { display: none; position: absolute; right: 16px; top: 60px; background: var(--bg); border: 1px solid var(--border); padding: 12px; border-radius: 10px; }
+  .nav-links.show { display: flex; flex-direction: column; width: 200px; }
+}
+
+@media (min-width: 700px) {
+  .cards { grid-template-columns: repeat(3, 1fr); }
+  .contact-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.fade-in {
+  animation: fade 0.6s ease-in;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #1a202c;
+}
+
+body.dark-mode {
+  background-color: #0e0e0e;
+  color: #e2e8f0;
+}
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 1.5rem;
+}
+.container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
