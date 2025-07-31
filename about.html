@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About · Kivairu Sam</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="brand">
+        <img src="images/avatar.svg" alt="Avatar" class="avatar" />
+        <span class="brand-text">
+          <strong class="name">Kivairu Sam</strong>
+          <small class="alias">HexSentinel</small>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a class="active" href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button class="theme-toggle" aria-label="Toggle theme">🌗</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>About</h1>
+    <p>
+      I’m <strong>Kivairu Sam</strong> (<em>HexSentinel</em>), a Data Analyst, Ethical Hacker, Software Developer, and Graphics Designer.
+      I enjoy building secure systems, useful tools, and clean interfaces.
+    </p>
+    <h2>Skills</h2>
+    <ul class="bullets">
+      <li>Cybersecurity: Kali, lab setup, network basics.</li>
+      <li>Data: R, Python, analysis, reporting.</li>
+      <li>Software: HTML/CSS/JS basics; app prototyping.</li>
+      <li>Design: UI/UX fundamentals, graphics.</li>
+    </ul>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> <span class="name">Kivairu Sam</span>. All rights reserved.</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+<script>
+  // Set the current year in the footer
+  document.getElementById('year').textContent = new Date().getFullYear();
