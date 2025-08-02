@@ -5,7 +5,6 @@ This is my first personal portfolio website — designed to showcase my skills, 
 ## 🌐 Live Preview
 
 [Click to View the Website](https://samkiva.github.io/my-portfolio/)  
-*(Replace the link with your actual deployed URL once live)*
 
 ## 📁 Project Structure
 
